@@ -1,5 +1,15 @@
 {
-  "name": "fusion-starter",
+  "name": "divine-wisdom",
+  "version": "1.0.0",
+  "description": "AI-powered spiritual guidance combining ancient wisdom from the Bhagavad Gita with modern psychology",
+  "keywords": ["ai", "spirituality", "bhagavad-gita", "psychology", "wisdom", "guidance", "mindfulness", "meditation"],
+  "author": "Divine Wisdom Team",
+  "homepage": "https://divinewisdom.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/divine-wisdom/app.git"
+  },
+  "license": "MIT",
   "private": true,
   "type": "module",
   "pkg": {
@@ -18,7 +28,8 @@
     "start": "node dist/server/node-build.mjs",
     "test": "vitest --run",
     "format.fix": "prettier --write .",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "deploy": "npm run build && netlify deploy --prod"
   },
   "dependencies": {
     "dotenv": "^17.2.0",
