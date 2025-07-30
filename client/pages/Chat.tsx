@@ -283,10 +283,10 @@ export default function Chat() {
                   >
                     <Card
                       className={cn(
-                        "divine-transition hover:shadow-mystical",
+                        "divine-transition hover:shadow-mystical backdrop-blur-xl",
                         message.type === "user"
-                          ? "bg-primary text-primary-foreground ml-auto"
-                          : "bg-card border-border/50"
+                          ? "bg-wisdom-gradient text-primary-foreground ml-auto shadow-divine"
+                          : "bg-card/30 mystical-blur border-border/30"
                       )}
                     >
                       <CardContent className="p-4">
