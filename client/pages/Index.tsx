@@ -188,7 +188,8 @@ export default function Index() {
               return (
                 <Card
                   key={index}
-                  className="relative overflow-hidden border-border/50 hover:border-primary/30 divine-transition group hover:shadow-cosmic bg-card/30 mystical-blur backdrop-blur-xl"
+                  className="relative overflow-hidden border-border/50 hover:border-primary/30 divine-transition group hover:shadow-cosmic bg-card/30 mystical-blur backdrop-blur-xl animate-slide-in-bottom"
+                  style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <div className={`absolute inset-0 bg-${feature.gradient} opacity-5 group-hover:opacity-10 divine-transition`} />
                   <CardHeader className="relative">
