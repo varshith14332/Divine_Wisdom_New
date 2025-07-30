@@ -227,7 +227,7 @@ export default function Index() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="relative overflow-hidden hover:shadow-mystical divine-transition">
+              <Card key={index} className="relative overflow-hidden hover:shadow-mystical divine-transition bg-card/30 mystical-blur backdrop-blur-xl border-border/50">
                 <CardContent className="pt-6">
                   <div className="flex mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
