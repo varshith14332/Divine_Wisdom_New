@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from "react"
+import { Link } from "react-router-dom"
 import { Send, Sparkles, BookOpen, Heart, Copy, Download, RotateCcw, User, Bot, Home, ArrowLeft, Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
