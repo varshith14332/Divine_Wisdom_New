@@ -41,8 +41,12 @@ export function Footer() {
   ]
 
   return (
-    <footer className="border-t bg-card/50 mystical-blur">
-      <div className="container mx-auto px-4 py-12">
+    <footer className="border-t bg-card/30 mystical-blur backdrop-blur-xl relative">
+      {/* Glassmorphism background effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-accent/3" />
+      <div className="absolute top-0 left-1/3 w-48 h-48 bg-wisdom-gradient rounded-full blur-3xl opacity-5" />
+
+      <div className="container mx-auto px-4 py-12 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
