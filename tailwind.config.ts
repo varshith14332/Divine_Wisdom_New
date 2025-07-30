@@ -130,6 +130,36 @@ export default {
             "box-shadow": "0 0 40px hsl(var(--primary) / 0.6)",
           },
         },
+        "slide-in-from-right": {
+          "0%": {
+            transform: "translateX(100%)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        "slide-in-from-bottom": {
+          "0%": {
+            transform: "translateY(50px)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "translateY(0)",
+            opacity: "1",
+          },
+        },
+        "fade-in-scale": {
+          "0%": {
+            transform: "scale(0.9)",
+            opacity: "0",
+          },
+          "100%": {
+            transform: "scale(1)",
+            opacity: "1",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
