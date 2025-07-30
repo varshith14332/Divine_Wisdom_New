@@ -186,9 +186,9 @@ export default function Index() {
             {features.map((feature, index) => {
               const Icon = feature.icon
               return (
-                <Card 
-                  key={index} 
-                  className="relative overflow-hidden border-border/50 hover:border-primary/30 divine-transition group hover:shadow-cosmic"
+                <Card
+                  key={index}
+                  className="relative overflow-hidden border-border/50 hover:border-primary/30 divine-transition group hover:shadow-cosmic bg-card/30 mystical-blur backdrop-blur-xl"
                 >
                   <div className={`absolute inset-0 bg-${feature.gradient} opacity-5 group-hover:opacity-10 divine-transition`} />
                   <CardHeader className="relative">
