@@ -83,7 +83,7 @@ export default function Index() {
   ]
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen animate-fade-in-scale">
       {/* Hero Section */}
       <section className="relative pt-20 pb-32 overflow-hidden">
         {/* Background Elements */}
