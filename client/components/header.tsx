@@ -51,7 +51,7 @@ export function Header() {
                   key={item.path}
                   variant="ghost"
                   asChild
-                  className="divine-transition hover:bg-accent/50"
+                  className="divine-transition hover:bg-accent/50 hover:shadow-mystical backdrop-blur-sm"
                 >
                   <Link to={item.path} className="flex items-center space-x-2">
                     <Icon className="h-4 w-4" />
