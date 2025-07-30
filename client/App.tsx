@@ -37,7 +37,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => (
 
 // Full-screen layout for auth and chat pages
 const FullscreenLayout = ({ children }: { children: React.ReactNode }) => (
-  <div className="min-h-screen">{children}</div>
+  <div className="min-h-screen">
+    {children}
+    <FloatingNav />
+  </div>
 );
 
 const App = () => (
