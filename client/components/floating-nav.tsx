@@ -27,9 +27,28 @@ export function FloatingNav() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Don't show on chat page since it has its own navigation
-  if (location.pathname === "/chat") {
-    return null
+  // Show simplified version on chat page
+  const isChatPage = location.pathname === "/chat"
+
+  if (isChatPage) {
+    return (
+      <div
+        className={cn(
+          "fixed bottom-6 left-6 z-40 transition-all duration-300",
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
+        )}
+      >
+        <Button
+          asChild
+          className="w-12 h-12 rounded-full bg-card/95 mystical-blur backdrop-blur-xl text-foreground hover:bg-accent/50 divine-transition shadow-lg border border-border/30"
+          title="Go to Home"
+        >
+          <Link to="/">
+            <Home className="w-4 h-4" />
+          </Link>
+        </Button>
+      </div>
+    )
   }
 
   return (
