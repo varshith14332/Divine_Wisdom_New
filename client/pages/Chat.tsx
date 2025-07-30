@@ -16,6 +16,55 @@ interface Message {
   source?: "gita" | "psychology" | "general"
 }
 
+// Navigation menu component for mobile
+function ChatNavigationMenu() {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const navItems = [
+    { name: "Home", path: "/", icon: Home },
+    { name: "About", path: "/about", icon: BookOpen },
+    { name: "Profile", path: "/profile", icon: User },
+    { name: "Saved", path: "/saved", icon: Heart },
+  ]
+
+  return (
+    <div className="relative">
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={() => setIsOpen(!isOpen)}
+        className="divine-transition hover:bg-primary/10 hover:shadow-divine rounded-full"
+      >
+        {isOpen ? <X className="w-4 h-4" /> : <Menu className="w-4 h-4" />}
+      </Button>
+
+      {isOpen && (
+        <div className="absolute right-0 top-full mt-2 w-48 bg-card/95 mystical-blur backdrop-blur-xl border border-border/30 rounded-xl shadow-cosmic overflow-hidden z-50">
+          <div className="p-2 space-y-1">
+            {navItems.map((item) => {
+              const Icon = item.icon
+              return (
+                <Button
+                  key={item.path}
+                  variant="ghost"
+                  asChild
+                  className="w-full justify-start divine-transition hover:bg-accent/50"
+                  onClick={() => setIsOpen(false)}
+                >
+                  <Link to={item.path} className="flex items-center space-x-2">
+                    <Icon className="w-4 h-4" />
+                    <span>{item.name}</span>
+                  </Link>
+                </Button>
+              )
+            })}
+          </div>
+        </div>
+      )}
+    </div>
+  )
+}
+
 export default function Chat() {
   const [messages, setMessages] = useState<Message[]>([
     {
