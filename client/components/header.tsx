@@ -88,10 +88,10 @@ export function Header() {
 
             {/* Auth Buttons */}
             <div className="hidden md:flex items-center space-x-2 ml-4">
-              <Button variant="ghost" asChild className="divine-transition">
+              <Button variant="ghost" asChild className="divine-transition hover:bg-accent/50 backdrop-blur-sm">
                 <Link to="/login">Login</Link>
               </Button>
-              <Button asChild className="bg-wisdom-gradient hover:opacity-90 divine-transition enlighten-glow">
+              <Button asChild className="bg-wisdom-gradient hover:opacity-90 divine-transition enlighten-glow hover:shadow-divine backdrop-blur-sm">
                 <Link to="/signup">Sign Up</Link>
               </Button>
             </div>
