@@ -400,7 +400,7 @@ export default function Chat() {
                     onChange={(e) => setInputValue(e.target.value)}
                     onKeyPress={handleKeyPress}
                     placeholder="Ask for wisdom and guidance..."
-                    className="pr-12 py-3 divine-transition focus:ring-primary/30"
+                    className="pr-12 py-3 divine-transition focus:ring-primary/30 bg-card/50 mystical-blur backdrop-blur-xl border-border/30"
                     disabled={isLoading}
                   />
                   <Button
