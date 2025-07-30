@@ -130,32 +130,77 @@ export default function Chat() {
   return (
     <div className="flex flex-col h-screen bg-background">
       {/* Header */}
-      <div className="border-b bg-card/50 mystical-blur px-6 py-4">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-3">
-            <div className="relative">
-              <Sparkles className="h-8 w-8 text-primary animate-divine-pulse" />
-              <div className="absolute inset-0 h-8 w-8 text-primary/30 animate-ping" />
+      <div className="border-b bg-card/30 mystical-blur backdrop-blur-xl shadow-lg px-6 py-4 relative">
+        {/* Glassmorphism background effects */}
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5" />
+        <div className="absolute top-0 left-1/4 w-32 h-32 bg-wisdom-gradient rounded-full blur-3xl opacity-10" />
+        <div className="absolute top-0 right-1/4 w-32 h-32 bg-cosmic-gradient rounded-full blur-3xl opacity-10" />
+
+        <div className="flex items-center justify-between relative z-10">
+          {/* Left side - Navigation and Logo */}
+          <div className="flex items-center space-x-4">
+            <div className="flex items-center space-x-2">
+              <Button
+                variant="ghost"
+                size="sm"
+                asChild
+                className="divine-transition hover:bg-primary/10 hover:shadow-divine rounded-full"
+              >
+                <Link to="/">
+                  <Home className="w-4 h-4" />
+                </Link>
+              </Button>
+              <Button
+                variant="ghost"
+                size="sm"
+                onClick={() => window.history.back()}
+                className="divine-transition hover:bg-primary/10 hover:shadow-divine rounded-full"
+              >
+                <ArrowLeft className="w-4 h-4" />
+              </Button>
             </div>
-            <div>
-              <h1 className="text-xl font-bold bg-wisdom-gradient bg-clip-text text-transparent">
-                Divine Wisdom Chat
-              </h1>
-              <p className="text-sm text-muted-foreground">
-                AI-powered guidance from ancient wisdom & modern psychology
-              </p>
+
+            <div className="h-6 w-px bg-border/50" />
+
+            <div className="flex items-center space-x-3">
+              <div className="relative">
+                <Sparkles className="h-8 w-8 text-primary animate-divine-pulse drop-shadow-lg" />
+                <div className="absolute inset-0 h-8 w-8 text-primary/30 animate-ping" />
+              </div>
+              <div>
+                <h1 className="text-xl font-bold bg-wisdom-gradient bg-clip-text text-transparent drop-shadow-sm">
+                  Divine Wisdom Chat
+                </h1>
+                <p className="text-sm text-muted-foreground">
+                  AI-powered guidance from ancient wisdom & modern psychology
+                </p>
+              </div>
             </div>
           </div>
-          
+
+          {/* Right side - Actions */}
           <div className="flex items-center space-x-2">
-            <Button variant="outline" size="sm" className="divine-transition hover:bg-accent/50">
+            <Button
+              variant="outline"
+              size="sm"
+              className="divine-transition hover:bg-accent/50 backdrop-blur-sm bg-card/30 border-border/30 hover:shadow-mystical"
+            >
               <Download className="w-4 h-4 mr-2" />
               Export
             </Button>
-            <Button variant="outline" size="sm" className="divine-transition hover:bg-accent/50">
+            <Button
+              variant="outline"
+              size="sm"
+              className="divine-transition hover:bg-accent/50 backdrop-blur-sm bg-card/30 border-border/30 hover:shadow-mystical"
+            >
               <RotateCcw className="w-4 h-4 mr-2" />
               New Chat
             </Button>
+
+            {/* Navigation Menu for Mobile */}
+            <div className="md:hidden">
+              <ChatNavigationMenu />
+            </div>
           </div>
         </div>
       </div>
