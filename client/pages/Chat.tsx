@@ -193,7 +193,8 @@ export default function Chat() {
                 variant="ghost"
                 size="sm"
                 asChild
-                className="divine-transition hover:bg-primary/10 hover:shadow-divine rounded-full"
+                className="divine-transition hover:bg-primary/10 hover:shadow-divine rounded-full backdrop-blur-sm bg-card/20 border border-border/30"
+                title="Go to Home"
               >
                 <Link to="/">
                   <Home className="w-4 h-4" />
@@ -203,7 +204,8 @@ export default function Chat() {
                 variant="ghost"
                 size="sm"
                 onClick={() => window.history.back()}
-                className="divine-transition hover:bg-primary/10 hover:shadow-divine rounded-full"
+                className="divine-transition hover:bg-primary/10 hover:shadow-divine rounded-full backdrop-blur-sm bg-card/20 border border-border/30"
+                title="Go Back"
               >
                 <ArrowLeft className="w-4 h-4" />
               </Button>
