@@ -22,8 +22,13 @@ export function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/80 mystical-blur">
-      <div className="container mx-auto px-4">
+    <header className="sticky top-0 z-50 w-full border-b bg-card/30 mystical-blur backdrop-blur-xl shadow-lg">
+      {/* Glassmorphism background effects */}
+      <div className="absolute inset-0 bg-gradient-to-r from-primary/5 via-transparent to-accent/5" />
+      <div className="absolute top-0 left-1/4 w-32 h-32 bg-wisdom-gradient rounded-full blur-3xl opacity-10" />
+      <div className="absolute top-0 right-1/4 w-32 h-32 bg-cosmic-gradient rounded-full blur-3xl opacity-10" />
+
+      <div className="container mx-auto px-4 relative z-10">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link 
