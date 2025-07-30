@@ -391,7 +391,7 @@ export default function Chat() {
             {/* Glassmorphism background effects */}
             <div className="absolute inset-0 bg-gradient-to-r from-primary/3 via-transparent to-accent/3" />
             <div className="absolute top-0 left-1/4 w-32 h-32 bg-wisdom-gradient rounded-full blur-3xl opacity-5" />
-            <div className="max-w-4xl mx-auto">
+            <div className="max-w-4xl mx-auto relative z-10">
               <div className="flex items-end space-x-3">
                 <div className="flex-1 relative">
                   <Input
