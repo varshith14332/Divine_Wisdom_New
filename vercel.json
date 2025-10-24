@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "builds": [
+    { "src": "index.html", "use": "@vercel/static-build", "config": { "distDir": "dist/spa" } },
+    { "src": "api/**/*.ts", "use": "@vercel/node" }
+  ],
+  "functions": {
+    "api/**": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "routes": [
+    { "src": "/api/.*", "dest": "/api/[...all]" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
